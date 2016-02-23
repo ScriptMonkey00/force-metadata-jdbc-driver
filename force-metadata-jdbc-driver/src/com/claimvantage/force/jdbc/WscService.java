@@ -6,6 +6,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.SynchronousQueue;
 
 import com.sforce.soap.partner.ChildRelationship;
 import com.sforce.soap.partner.Connector;
@@ -133,7 +134,7 @@ public class WscService {
                                 String childParentReferenceName = childParentReferenceNames.get(qualified);
                                 Boolean cascadeDelete = childCascadeDeletes.get(qualified);
                                 if (childParentReferenceName != null && cascadeDelete != null) {
-                                    comments.add("Referenced: " + childParentReferenceName + (cascadeDelete ? " (cascade delete)" : ""));
+                                    comments.add("Referenced: " + childParentReferenceName + (cascadeDelete ? " (Master/detail)" : ""));
                                 }
                             }
                             column.setComments(separate(comments, "\n"));
@@ -258,6 +259,8 @@ public class WscService {
                 list.add(sob.getName());
             }
         }
+        list.add("Contact");
+        list.add("Account");
         return list;
     }
 
