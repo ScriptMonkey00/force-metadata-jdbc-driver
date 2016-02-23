@@ -30,6 +30,21 @@ public class ForcePreparedStatement implements PreparedStatement {
         return new ForceResultSet(new ArrayList<ColumnMap<String, Object>>());
     }
 
+    /*
+        Matt is just trying here:
+     */
+    public void closeOnCompletion() throws SQLException{
+    }
+    public boolean isCloseOnCompletion() throws SQLException{
+        return false;
+    }
+
+
+    /*
+        Back to the original Code
+     */
+
+
     //
     // Not implemented below here
     //

@@ -151,7 +151,25 @@ public class ForceMetaData implements DatabaseMetaData {
     public boolean nullsAreSortedLow() throws SQLException {
         return true;
     }
-    
+
+    /*
+       Matt is just trying here:
+    */
+    public boolean generatedKeyAlwaysReturned() throws SQLException{
+        return false;
+    }
+    public ResultSet getPseudoColumns(String catalog,
+                               String schemaPattern,
+                               String tableNamePattern,
+                               String columnNamePattern) throws SQLException {
+        return null;
+    }
+
+    /*
+        Back to the original Code
+     */
+
+
     //
     // Not implemented below here
     //

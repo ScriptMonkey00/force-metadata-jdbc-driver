@@ -8,6 +8,7 @@ import java.sql.DriverManager;
 import java.sql.DriverPropertyInfo;
 import java.sql.SQLException;
 import java.util.Properties;
+import java.util.logging.Logger;
 
 /**
  * A JDBC driver that wraps the Force.com enterprise web service API to obtain
@@ -65,4 +66,13 @@ public class ForceMetaDataDriver implements Driver {
     public boolean jdbcCompliant() {
         return false;
     }
+
+    /*
+Matt is just trying here:
+*/
+    public Logger getParentLogger(){
+        return null;
+    }
+
+
 }

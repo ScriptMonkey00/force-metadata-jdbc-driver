@@ -147,7 +147,17 @@ public class ForceResultSet implements ResultSet {
     public ResultSetMetaData getMetaData() throws SQLException {
         return new ForceResultSetMetaData();
     }
-    
+
+    /*
+    Matt's stuff
+     */
+    public Object getObject(String columnLbl, Class obj) throws SQLException{
+        return null;
+    }
+    public Object getObject(int columnLbl, Class obj) throws SQLException{
+        return null;
+    }
+
     //
     // Not implemented below here
     //

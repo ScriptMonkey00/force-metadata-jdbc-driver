@@ -38,7 +38,28 @@ public class ForceConnection implements Connection {
     public PreparedStatement prepareStatement(String sql) throws SQLException {
         return new ForcePreparedStatement();
     }
-    
+    /*
+   Matt is just trying here:
+    */
+    public int getNetworkTimeout() throws SQLException{
+        return 500;
+    }
+
+    public void setNetworkTimeout(java.util.concurrent.Executor ex, int x) throws SQLException{
+    }
+
+    public void abort(java.util.concurrent.Executor ex) throws SQLException{
+    }
+
+    public String getSchema() throws SQLException{
+        return "Force.com Schema";
+    }
+    public void setSchema(String str) throws SQLException{
+    }
+
+    /*
+        Back to the original Code
+     */
     //
     // Not implemented below here
     //
